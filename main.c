@@ -78,7 +78,5 @@ int main(){
         printf("The element number %d is: %d\n",i, history[i]);
     }
 
-    
-    exit(0);
     return 0;
 }
