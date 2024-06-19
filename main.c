@@ -59,12 +59,12 @@ int main(){
         if(strcmp("moveLeft",comm) == 0){
             moveLeft(currTr);
             history = realloc(history,sizeof(int));
-            *(history + (++length - 1)) = currTr -> value; //sintassi mostruosa
+            *(history + length++) = currTr -> value; //sintassi mostruosa
         }
         if(strcmp("moveRight",comm) == 0){
             moveRight(currTr);
             history = realloc(history,sizeof(int));
-            *(history +(++length - 1)) = currTr -> value;
+            *(history + length++) = currTr -> value;
         }
         if(strcmp("print",comm) == 0){
             printVal(currTr);
