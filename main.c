@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//AGGIUNGI UNA FUNZIONE CHE CERCA UN DETERMINATO VALORE NELL'ALBERO
 struct Tree{
     int value;
     struct Tree* left;
@@ -33,10 +33,20 @@ void moveRight(struct Tree *tr){
     printf("Ti sei spostato a destra\n");
 }
 
+
+void moveUp(struct Tree *tr){
+    
+}
+
 void printVal(struct Tree *tr){
     printf("Il valore del nodo corrente e': %d\n", tr -> value);
 
 }
+
+void searchVal(int val){
+
+}
+
 //void traverseUpwards serve una variabile che tiene la storia
 int main(){
     // se si prova ad accedere ad un nodo che non e' neancora stato creato ez segFault
@@ -71,6 +81,12 @@ int main(){
         }
         if(strcmp("quit",comm) == 0){
             break;
+        }
+        if(strcmp("search",comm) == 0){
+            printf("Which element do you want to search: ");
+            int val;
+            scanf("%d",&val);
+            searchVal(val);
         }
     }
 
